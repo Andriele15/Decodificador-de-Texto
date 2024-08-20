@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <a href="#"><img src="/IMG/logoLura.png" alt="Logo da Alura" /></a>
+      </div>
+      <div class="titulo"><h1>Decodificador de texto</h1></div>
+    </header>
+
+    <main class="principal">
+      <div class="conteudo-principal">
+        <div class="primeiro-container">
+          <p class="informacao">Apenas letras minúsculas e sem acento.</p>
+          <textarea
+            name="Primeiro campo de texto"
+            id="input-texto-usu"
+            cols="40"
+            rows="10"
+            placeholder="Digite aqui seu texto..."
+          ></textarea>
+
+          <div class="button-container">
+            <button id="criptografar-btn" onclick="criptografarTexto()">
+              Criptografar
+            </button>
+            <button id="descriptografar-btn" onclick="descriptografarTexto()">
+              Descriptografar
+            </button>
+          </div>
+
+          <p id="mensagem"></p>
+          <!-- Parágrafo para mensagens de erro -->
+        </div>
+
+        <div class="resposta">
+          <div id="criptografia-container">
+            <div class="criptografia">
+              <textarea
+                name="Segundo campo de texto"
+                id="texto-criptografado"
+                cols="40"
+                rows="10"
+                placeholder="O texto decodificado vai aparecer aqui..."
+                readonly
+              ></textarea>
+              <button onclick="copiarTexto()" id="botao-copiar">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <p>Desenvolvido por <a href="#" target="_blank">Andriele Pacheco</a></p>
+    </footer>
+    <script src="decodificador.JS"></script>
+  </body>
+</html>
